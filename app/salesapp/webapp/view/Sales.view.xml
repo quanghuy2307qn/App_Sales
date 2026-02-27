@@ -2,5 +2,33 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id='salesTable' items="{ path: '/SalesOrders' }">
+                <columns>
+                    <Column id="idCustomer" >
+                        <Text id="idTextCustomer" text="Customer"/>
+                    </Column>
+
+                    <Column id="idAmount" >
+                        <Text id="idTextAmount" text="Amount"/>
+                    </Column>
+
+                    <Column id="idStatus" >
+                        <Text id="idTextStatus" text="Status"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="idListItem">
+                        <cells>
+                            <Text id="idTextItemCustomer" text="{customer}"></Text>
+                            <Text id="idTextItemAmount" text="{totalAmount}"></Text>
+                            <Text id="idTextItemStatus" text="{status}"></Text>                           
+                        </cells>
+                    
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
