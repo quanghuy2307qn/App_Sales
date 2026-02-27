@@ -1,0 +1,37 @@
+<mvc:View
+        controllerName="app.sales.salesapp.controller.SalesDetail"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:uxap="sap.uxap"
+>
+
+<uxap:ObjectPageLayout id="idLayout">
+    <uxap:sections>
+        <uxap:ObjectPageSection id="idLayoutSection" title="General Data">
+            <uxap:subSections>
+                <uxap:ObjectPageSubSection id="idLayoutSubSection">
+                    <VBox id="idBox">
+                        <Label id="idCustomerDetail" text="Customer"/>
+                        <Input id="idCustomerInput" value="{customer}" />
+
+                        <Label id="idAmountDetail" text="Amount"/>
+                        <Input id="idAmountInput" value="{totalAmount}" />
+                    
+                        <Label id="idStatusDetail" text="Status"/>
+                        <Input id="idStatusInput" value="{status}" />
+                    
+                    </VBox>
+                
+                </uxap:ObjectPageSubSection>
+            
+            </uxap:subSections>
+        
+        
+        </uxap:ObjectPageSection>
+    
+    </uxap:sections>
+</uxap:ObjectPageLayout>
+
+
+
+</mvc:View>

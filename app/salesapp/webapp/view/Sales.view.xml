@@ -35,13 +35,12 @@
                 </columns>
 
                 <items>
-                    <ColumnListItem id="idListItem">
+                    <ColumnListItem id="idListItem" type="Navigation" press=".onPressDetail">
                         <cells>
                             <Text id="idTextItemCustomer" text="{customer}"></Text>
                             <Text id="idTextItemAmount" text="{totalAmount}"></Text>
                             <Text id="idTextItemStatus" text="{status}"></Text>                           
-                        </cells>
-                    
+                        </cells>                   
                     </ColumnListItem>
                 </items>
             </Table>
