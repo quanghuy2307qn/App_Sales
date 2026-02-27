@@ -1,9 +1,25 @@
 <mvc:View controllerName="app.sales.salesapp.controller.Sales"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:mdc="sap.ui.mdc">
     <Page id="page" title="{i18n>title}">
+      <mdc:FilterBar 
+        id="idFilterBar"
+        liveMode="true"
+        p13nMode="Item,Value"
+        >
+
+        <mdc:filterItems>
+            <mdc:FilterField id="idLabelCustomerFilter" label="Customer" propertyKey="customer" dataType="sap.ui.model.type.String"></mdc:FilterField>
+            <mdc:FilterField id="idLabelAmountFilter" label="Customer" propertyKey="totalAmount" dataType="sap.ui.model.type.Decimal"></mdc:FilterField>
+            <mdc:FilterField id="idLabelStatusFilter" label="Customer" propertyKey="status" dataType="sap.ui.model.type.String"></mdc:FilterField>
+
+        </mdc:filterItems>
+    
+
+      </mdc:FilterBar>
         <content>
-            <Table id='salesTable' items="{ path: '/SalesOrders' }">
+            <Table id='salesTable' items="{ path: '/SalesOrders' }" growing="true" growingScrollToLoad="true">
                 <columns>
                     <Column id="idCustomer" >
                         <Text id="idTextCustomer" text="Customer"/>
