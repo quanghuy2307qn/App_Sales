@@ -33,8 +33,8 @@ module.exports = (srv) => {
 
         if(quantity <= 0){
             req.error(400, 'Quantity must be greater than zero');
-        }
-
-        
+        }       
     });
+
+    
 }
