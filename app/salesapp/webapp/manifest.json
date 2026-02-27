@@ -48,7 +48,9 @@
       "minUI5Version": "1.145.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.ui.mdc": {},
+        "sap.uxap": {}
       }
     },
     "contentDensities": {
@@ -98,12 +100,23 @@
           "target": [
             "TargetSales"
           ]
+        },
+        {
+          "name": "RouteSalesDetail",
+          "pattern": "detail/{ID}",
+          "target" :[
+            "TargetSalesDetail"
+          ]
         }
       ],
       "targets": {
         "TargetSales": {
           "id": "Sales",
           "name": "Sales"
+        },
+        "TargetSalesDetail":{
+          "id": "SalesDetail",
+          "name": "SalesDetail"
         }
       }
     },
